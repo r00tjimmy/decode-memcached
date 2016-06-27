@@ -1,3 +1,8 @@
+/**
+* 此文件是为 memcached 生成守护进程的,  生成守护进场 ------>  判断是否生成成功 -----> 然后设定文件输出导向等
+**/
+
+
 /*    $Header: /cvsroot/wikipedia/willow/src/bin/willow/daemon.c,v 1.1 2005/05/02 19:15:21 kateturner Exp $    */
 /*    $NetBSD: daemon.c,v 1.9 2003/08/07 16:42:46 agc Exp $    */
 /*-

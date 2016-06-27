@@ -1,3 +1,8 @@
+/**
+* mm 的入口main 函数
+* memcached 主程序， 主函数，主逻辑入口文件，具体主流程的实现代码都在这里 
+**/
+
 /* -*- Mode: C; tab-width: 4; c-basic-offset: 4; indent-tabs-mode: nil -*- */
 /*
  *  memcached - memory caching daemon
@@ -56,6 +61,7 @@
 
 /*
  * forward declarations
+ * 前置声明
  */
 static void drive_machine(conn *c);
 static int new_socket(struct addrinfo *ai);
@@ -4967,9 +4973,11 @@ int main (int argc, char **argv) {
 
     /* handle SIGINT */
     // 注册中断信号处理函数, 简单打印信号信息
+    // 通常是键盘的  ctrl-c
     signal(SIGINT, sig_handler);
 
     /* init settings */
+    // 初始化 setting 结构体的数值
     settings_init();
 
     /* set stderr non-buffering (for running under, say, daemontools) */
@@ -5318,6 +5326,7 @@ int main (int argc, char **argv) {
 
     /* lose root privileges if we have them */
     // ? 丢弃 root 权限, 为什么
+    // 为了安全考虑呗。。。。  :), 下面这段是验证用户名，用户权限的
     if (getuid() == 0 || geteuid() == 0) {
         if (username == 0 || *username == '\0') {
             fprintf(stderr, "can't run as root without the -u switch\n");

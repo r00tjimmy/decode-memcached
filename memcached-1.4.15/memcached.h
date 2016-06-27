@@ -1,3 +1,9 @@
+/**
+* 用户声明一些 常量, 定义一些宏， 枚举， 结构体等 
+* memcached.c 的函数并没有在这文件里面定义
+**/
+
+
 /* -*- Mode: C; tab-width: 4; c-basic-offset: 4; indent-tabs-mode: nil -*- */
 
 /** \file
